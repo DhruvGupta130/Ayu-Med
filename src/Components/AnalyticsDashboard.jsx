@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -72,9 +71,9 @@ const AnalyticsDashboard = () => {
   };
 
   const performanceMetrics = {
-    "Average Wait Time (mins)": 15,
+    "Average Wait Time (min)": 15,
     "Satisfaction Rating (%)": 85,
-    "Daily Revenue (₹)": 50000,
+    "Daily Revenue (INR)": 50000,
   };
 
   return (

@@ -75,10 +75,10 @@ const PatientDetailsCard = ({ patient, refreshProfileData }) => {
       if(!updatedPatient.aadhaarId || !updatedPatient.nationality || !updatedPatient.alternateMobile){
         setError("Please fill all the required fields!")
         return;
-      }if(updatedPatient.aadhaarId.toString().length != 12){
+      }if(updatedPatient.aadhaarId.toString().length !== 12){
         setError('Invalid aadhaar number!')
         return;
-      }if(updatedPatient.alternateMobile.toString().length != 10){
+      }if(updatedPatient.alternateMobile.toString().length !== 10){
         setError('Invalid mobile number!')
         return;
       }

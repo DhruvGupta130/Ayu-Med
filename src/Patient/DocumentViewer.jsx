@@ -59,7 +59,7 @@ const DocumentViewer = ({ onUploadClick }) => {
         },
       });
       if (!response.ok) throw new Error("Failed to delete documents");
-      fetchDocuments();
+      await fetchDocuments();
     } catch (err) {
       console.error(err);
       setError("Unable to delete documents. Please try again.");
@@ -87,13 +87,13 @@ const DocumentViewer = ({ onUploadClick }) => {
   }, [token]);
 
   useEffect(() => {
-    fetchDocuments();
+    fetchDocuments().then(r => r);
   }, [fetchDocuments]);
 
   if (loading) {
       return <div className="loader"><CircularProgress/></div>;
     }
-  
+
   if (error) {
     return <div className="error-message">{error}</div>;
   }

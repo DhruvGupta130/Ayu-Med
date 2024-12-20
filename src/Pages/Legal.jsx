@@ -1,4 +1,3 @@
-import React from "react";
 import LegalDocs from "../Components/LegalDocs.jsx";
 
 function Legal() {

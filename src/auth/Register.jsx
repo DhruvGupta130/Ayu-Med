@@ -51,7 +51,7 @@ function Register() {
     // if(formData.password.length<8){
     //   setError("Password must be minimum 8 characters!");
     // }
-    if(formData.mobile.length!=10){
+    if(formData.mobile.length!==10){
       setError("Invalid Mobile Number!");
       return;
     }
