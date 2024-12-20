@@ -1,6 +1,3 @@
-// doctor/Patients.js
-import React from "react";
-
 const Patients = () => {
   const patients = [
     { id: 1, name: "John Doe", age: 30, condition: "Fever" },

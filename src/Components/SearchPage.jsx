@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { URL } from "../Api/Api";
 import { useLocation } from "react-router-dom";
@@ -41,7 +41,7 @@ function SearchPage() {
   return (
     <Container className="search-page" maxWidth="lg">
       <Typography variant="h6" align="center" gutterBottom className="search-page-title">
-        Search Results for: "{searchTerm}"
+        Search Results for: &#34;{searchTerm}&#34;
       </Typography>
 
       {loading ? (
@@ -52,7 +52,7 @@ function SearchPage() {
         <div>
           {searchResults.hospitals?.length > 0 && (
             <div className="card-section">
-              <h2 gutterBottom className="section-title">
+              <h2 className="section-title">
                 Hospitals
               </h2>
               <Box className="card-container">
@@ -66,7 +66,7 @@ function SearchPage() {
 
           {searchResults.doctors?.length > 0 && (
             <div className="card-section">
-             <h2 gutterBottom className="section-title">
+             <h2 className="section-title">
                 Doctors
               </h2>
               <Box className="card-container">
@@ -80,7 +80,7 @@ function SearchPage() {
 
           {searchResults.medications?.length > 0 && (
             <div className="card-section">
-              <h2 gutterBottom className="section-title">
+              <h2 className="section-title">
                 Medications
               </h2>
               <Box className="card-container">

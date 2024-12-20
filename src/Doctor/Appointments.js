@@ -1,6 +1,3 @@
-// doctor/Appointments.jsx
-import React from "react";
-
 const Appointments = () => {
   const appointments = [
     { id: 1, patient: "John Doe", time: "10:00 AM", status: "confirmed" },

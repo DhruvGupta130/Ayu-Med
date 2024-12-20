@@ -1,6 +1,3 @@
-// doctor/Feedback.js
-import React from "react";
-
 const Feedback = () => {
   const feedback = [
     { id: 1, patient: "John Doe", rating: 4, comments: "Great service!" },

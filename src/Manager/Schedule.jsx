@@ -1,6 +1,3 @@
-// doctor/Schedule.js
-import React from "react";
-
 const Schedule = () => {
   const schedule = [
     { day: "Monday", time: "9:00 AM - 5:00 PM" },

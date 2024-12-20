@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../Styles/AppointmentForm.css";
 import { patientURL, URL } from "../Api/Api";
 import axios from "axios";

@@ -1,4 +1,3 @@
-import React from 'react';
 import "../Styles/LegalDocs.css";
 import { Link } from 'react-router-dom';
 
@@ -32,7 +31,7 @@ const LegalDocs = () => {
         <p className="legal-description">
           When using AyuMed, you agree to our Terms of Service. This
           includes guidelines for using our platform, interacting with doctors,
-          and the responsibilities of both parties. It's essential to understand
+          and the responsibilities of both parties. It&#39;s essential to understand
           these terms to ensure a smooth experience for all users.
         </p>
 
@@ -41,7 +40,7 @@ const LegalDocs = () => {
           Our platform connects you with expert doctors who provide online
           consultations. These consultations are not a replacement for in-person
           medical visits but serve as a convenient option for medical advice,
-          prescriptions, and guidance. It's crucial to provide accurate and
+          prescriptions, and guidance. It&#39;s crucial to provide accurate and
           complete information to receive the best possible care.
         </p>
 

@@ -1,7 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import { Button, CircularProgress, TextField, Typography, Paper, Grid, Alert, Card, CardContent, CardActions, Divider } from '@mui/material';
-import { URL } from '../Api/Api';
+import {
+  Alert,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CircularProgress,
+  Divider,
+  Grid,
+  Paper,
+  TextField,
+  Typography
+} from '@mui/material';
+import {URL} from '../Api/Api';
 import '../Styles/HospitalListPage.css';
 
 const HospitalListPage = () => {
@@ -42,8 +54,7 @@ const HospitalListPage = () => {
               Math.cos(φ1) * Math.cos(φ2) *
               Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    const distance = R * c; // Distance in kilometers
-    return distance;
+    return R * c;
   };
 
   const fetchHospitals = async () => {

@@ -1,7 +1,3 @@
-// doctor/DashboardSummary.js
-import React from "react";
-
-
 const DashboardSummary = () => {
   const summary = [
     { label: "Appointments", value: 24 },

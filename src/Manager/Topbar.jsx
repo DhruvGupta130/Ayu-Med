@@ -1,5 +1,3 @@
-// doctor/Topbar.js
-import React from "react";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 

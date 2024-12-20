@@ -1,4 +1,3 @@
-import React from "react";
 import InformationCard from "../Components/InformationCard.jsx";
 import {
   faStethoscope,

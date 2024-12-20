@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "../Components/Hero.jsx";
 import Info from "../Components/Info.jsx";
 import Footer from "../Components/Footer.jsx";
