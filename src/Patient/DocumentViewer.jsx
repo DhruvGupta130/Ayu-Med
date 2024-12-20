@@ -12,8 +12,27 @@ const DocumentViewer = ({ onUploadClick }) => {
   const [loading, setLoading] = useState(true);
   const token = localStorage.getItem("token");
   const [error, setError] = useState("");
+  const [actionError, setActionError] = useState('');
   const [previewFile, setPreviewFile] = useState(null);
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
+
+  useEffect(() => {
+    if (error) {
+      const errorTimeout = setTimeout(() => {
+        setError('');
+      }, 2000);
+      return () => clearTimeout(errorTimeout);
+    }
+  }, [error]);
+
+  useEffect(() => {
+    if(actionError) {
+      const errorTimeout = setTimeout(() => {
+        setActionError('');
+      }, 2500);
+      return () => clearTimeout(errorTimeout);
+    }
+  }, [actionError]);
 
   const getDocument = async (id, isPreview = false) => {
     try {
@@ -23,7 +42,7 @@ const DocumentViewer = ({ onUploadClick }) => {
         },
       });
 
-      if (!response.ok) throw new Error("Failed to get document");
+      if (!response.ok) setActionError("Failed to get document");
       const blob = await response.blob();
       const fileURL = window.URL.createObjectURL(blob);
 
@@ -58,7 +77,7 @@ const DocumentViewer = ({ onUploadClick }) => {
           Authorization: `Bearer ${token}`,
         },
       });
-      if (!response.ok) throw new Error("Failed to delete documents");
+      if (!response.ok) setActionError("Failed to delete documents");
       await fetchDocuments();
     } catch (err) {
       console.error(err);
@@ -75,7 +94,7 @@ const DocumentViewer = ({ onUploadClick }) => {
           Authorization: `Bearer ${token}`,
         },
       });
-      if (!response.ok) throw new Error("Failed to fetch documents");
+      if (!response.ok) setError("Failed to fetch documents");
       const data = await response.json();
       setDocuments(data);
     } catch (err) {
@@ -110,6 +129,7 @@ const DocumentViewer = ({ onUploadClick }) => {
       <div className="upload-info">
         {loading && <LinearProgress sx={{ height: 8, marginY: 1 }} />}
         {!loading && !error && documents.length === 0 && <span>No documents found.</span>}
+        {actionError && <div className="error-message">{actionError}</div>}
       </div>
       {!loading && !error && documents.length !== 0 && (
         <div className="table-container">
