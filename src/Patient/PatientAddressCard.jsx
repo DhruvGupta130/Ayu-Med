@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from '@mui/material';
 import { Home, LocationOn, MyLocation } from '@mui/icons-material';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
-import { patientURL } from '../Api/Api';
+import {GOOGLE_API_KEY, patientURL} from '../Api/Api';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 
@@ -27,7 +27,7 @@ const PatientAddressCard = ({ patient, refreshProfileData }) => {
   const [showForm, setShowForm] = useState(false);
 
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: 'AIzaSyD01-LgPFU9Cil-aWrs4mbs12YIZn4eAcs',
+    googleMapsApiKey: `${GOOGLE_API_KEY}`,
     libraries: googleMapsLibraries,
   });
 
