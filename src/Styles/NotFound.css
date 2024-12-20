@@ -1,0 +1,82 @@
+/* Container for the entire Not Found page */
+.notfound-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #f4f4f4;
+  height: 80vh;
+  box-sizing: border-box;
+}
+
+/* Content box styling */
+.notfound-content {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.notfound-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Description styling */
+.notfound-description {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* URL message styling */
+.notfound-url {
+  font-size: large;
+  color: #888;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+/* Suggestion message styling */
+.notfound-suggestion {
+  font-size: 16px;
+  color: #555;
+}
+
+.notfound-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.notfound-link:hover {
+  text-decoration: underline;
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+  .notfound-title {
+    font-size: 28px; /* Smaller title font size for very small screens */
+  }
+
+  .notfound-description {
+    font-size: medium; /* Even smaller description font */
+  }
+
+  .notfound-url {
+    font-size: medium; /* Reduce URL message font */
+  }
+  .url{
+    width: 10px;
+  }
+
+  /* Further reduce padding for smaller devices */
+  .notfound-content {
+    padding: 15px;
+  }
+}
