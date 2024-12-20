@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../Styles/Contact.css";
 
 function Contact() {
@@ -28,8 +28,8 @@ function Contact() {
     <div className="contact-container">
       <div className="contact-header">
         <h1>Contact Us</h1>
-        <p>We'd love to hear from you! Please fill out the form below to get in touch with us. </p>
-        <p>Alternatively, you can drop a mail to "support@Ayumed.com"</p>
+        <p>We&#39;d love to hear from you! Please fill out the form below to get in touch with us. </p>
+        <p>Alternatively, you can drop a mail to &#34;support@Ayumed.com&#34;</p>
       </div>
       <div className="contact-form-container">
         {isSubmitted ? (
