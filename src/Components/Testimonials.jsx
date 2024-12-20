@@ -23,7 +23,7 @@ function Testimonials() {
       <div className="reviews">
         {reviews.map((review, index) => (
           <div key={index} className="review-card">
-            <p className="review-feedback">"{review.feedback}"</p>
+            <p className="review-feedback">&#34;{review.feedback}&#34;</p>
             <p className="review-author">- {review.name}</p>
           </div>
         ))}

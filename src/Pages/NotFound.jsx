@@ -1,5 +1,4 @@
-import React from "react";
-import "../Styles/NotFound.css"; 
+import "../Styles/NotFound.css";
 
 function NotFound() {
   const deployedURL = window.location.href;
@@ -9,7 +8,7 @@ function NotFound() {
       <div className="notfound-content">
         <h1 className="notfound-title">404 - Page Not Found</h1>
         <p className="notfound-description">
-          Sorry, the page you are looking for doesn't exist or has been moved.
+          Sorry, the page you are looking for doesn&#39;t exist or has been moved.
         </p>
         <p className="notfound-url">
           The requested URL: <b>{deployedURL}</b> was not found on this server.

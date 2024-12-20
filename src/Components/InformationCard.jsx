@@ -1,6 +1,6 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../Styles/InformationCard.css";
+import PropTypes from "prop-types";
 
 function InformationCard({ title, description, icon }) {
   return (
@@ -13,5 +13,11 @@ function InformationCard({ title, description, icon }) {
     </div>
   );
 }
+
+InformationCard.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired
+};
 
 export default InformationCard;

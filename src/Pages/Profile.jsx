@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import "../Styles/Profile.css";
 import { patientURL, securedURL } from "../Api/Api";

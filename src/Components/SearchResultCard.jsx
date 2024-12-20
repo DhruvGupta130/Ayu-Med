@@ -1,6 +1,6 @@
-import React from "react";
 import { Card, CardContent, CardMedia, Typography, Box, Divider } from "@mui/material";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const getFormattedDetails = (value) => (value ? value : "N/A");
 
@@ -127,5 +127,34 @@ function SearchResultCard({ result, type }) {
     </Card>
   );
 }
+
+SearchResultCard.propTypes = {
+    result: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        image: PropTypes.string,
+        hospitalName: PropTypes.string,
+        firstName: PropTypes.string,
+        lastName: PropTypes.string,
+        name: PropTypes.string,
+        description: PropTypes.string,
+        specialty: PropTypes.string,
+        address: PropTypes.shape({
+            street: PropTypes.string,
+            city: PropTypes.string,
+            state: PropTypes.string,
+        }),
+        establishedYear: PropTypes.string,
+        mobile: PropTypes.string,
+        email: PropTypes.string,
+        website: PropTypes.string,
+        experience: PropTypes.number,
+        degree: PropTypes.string,
+        department: PropTypes.string,
+        manufacturer: PropTypes.string,
+        price: PropTypes.string,
+        details: PropTypes.string,
+    }).isRequired,
+    type: PropTypes.oneOf(["Hospital", "Doctor", "Medication"]).isRequired,
+};
 
 export default SearchResultCard;

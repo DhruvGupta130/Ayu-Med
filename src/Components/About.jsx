@@ -1,4 +1,3 @@
-import React from "react";
 import Doctor from "../Assets/doctor-group.png";
 import SolutionStep from "./SolutionStep.jsx";
 import "../Styles/About.css";
